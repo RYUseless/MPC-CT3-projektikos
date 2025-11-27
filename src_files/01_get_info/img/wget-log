@@ -1,0 +1,11 @@
+--2025-11-15 10:42:15--  https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?fit=crop
+Resolving images.unsplash.com (images.unsplash.com)... 151.101.2.208, 151.101.130.208, 151.101.194.208, ...
+Connecting to images.unsplash.com (images.unsplash.com)|151.101.2.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1090391 (1.0M) [image/jpeg]
+Saving to: ‘photo-1503736334956-4c8f8e92946d?fit=crop’
+
+                 photo-15037363349   0%[                                                                 ]       0  --.-KB/s                               photo-150373633495  73%[===============================================>                 ] 786.76K  3.76MB/s               photo-1503736334956-4c8f8e92946d?f 100%[================================================================>]   1.04M  4.30MB/s    in 0.2s    
+
+2025-11-15 10:42:16 (4.30 MB/s) - ‘photo-1503736334956-4c8f8e92946d?fit=crop’ saved [1090391/1090391]
+

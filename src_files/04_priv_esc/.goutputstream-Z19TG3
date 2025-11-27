@@ -1,0 +1,24 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+dealers = set()  # dealer register
+
+@app.route('/register_dealer', methods=['POST'])
+def register_dealer():
+    name = request.json.get('name', '')
+    email = request.json.get('email', '')
+    # No security check
+    dealers.add(email)
+    return jsonify({"dealer_token": f"token-{email}"})
+
+@app.route('/unlock_car', methods=['POST'])
+def unlock_car():
+    token = request.headers.get('X-Dealer-Token', '')
+    vin = request.json.get('vin', '')
+    if token == f"token-attacker@evil.com" and vin == 'KNAKU814DD5354348':
+        return jsonify({"result": "Car unlocked!", "flag": "FRANKENSTEIN_2025_IS_GOOD"})
+    return jsonify({"error": "Not authorized"}), 403
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
